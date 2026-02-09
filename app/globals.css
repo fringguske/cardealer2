@@ -2,48 +2,43 @@
 
 :root {
   /* Premium Color Palette - HSL */
-  --primary: 220 90% 56%;
-  /* Vibrant Blue */
-  --primary-dark: 220 90% 45%;
-  /* Darker Blue */
-  --secondary: 280 85% 60%;
-  /* Vibrant Purple */
-  --accent: 330 85% 60%;
-  /* Pink/Magenta Accent */
+  --primary: 224 100% 50%;
+  /* More vibrant blue */
+  --primary-dark: 224 100% 40%;
+  --secondary: 270 100% 60%;
+  /* Vibrant Royal Purple */
+  --accent: 338 100% 55%;
+  /* Rich Pink/Rose */
 
-  --background: 210 20% 98%;
-  /* Very light blue-grey */
+  --background: 210 40% 98.5%;
   --surface: 0 0% 100%;
-  /* Pure white */
   --surface-glass: 0 0% 100%;
 
-  --foreground: 222 47% 11%;
-  /* Deep Navy for text */
-  --muted: 215 16% 47%;
-  /* Muted text */
+  --foreground: 222 60% 8%;
+  --muted: 215 20% 45%;
 
-  --success: 150 90% 40%;
-  --warning: 40 90% 50%;
-  --error: 0 85% 60%;
+  --success: 142 76% 36%;
+  --warning: 38 92% 50%;
+  --error: 0 84% 60%;
 
   /* Gradients */
   --gradient-primary: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--secondary)) 100%);
-  --gradient-surface: linear-gradient(180deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.4) 100%);
-  --gradient-glass: linear-gradient(135deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.05));
-  --gradient-glow: radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.15) 0%, transparent 70%);
+  --gradient-rich: linear-gradient(135deg, #0061ff 0%, #60efff 100%);
+  --gradient-sunset: linear-gradient(135deg, #ff3d68 0%, #ff8e3c 100%);
+  --gradient-surface: linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.6) 100%);
+  --gradient-glass: linear-gradient(135deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.2));
+  --gradient-glow: radial-gradient(circle at 50% 50%, rgba(37, 99, 235, 0.2) 0%, transparent 70%);
 
   /* Shadows */
-  --shadow-sm: 0 2px 8px -2px rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 8px 16px -4px rgba(0, 0, 0, 0.08);
-  /* Smoother shadow */
-  --shadow-lg: 0 12px 32px -8px rgba(37, 99, 235, 0.15);
-  /* Colored shadow */
-  --shadow-glass: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+  --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  --shadow-md: 0 10px 15px -3px rgba(37, 99, 235, 0.08), 0 4px 6px -2px rgba(37, 99, 235, 0.05);
+  --shadow-lg: 0 20px 25px -5px rgba(37, 99, 235, 0.15), 0 10px 10px -5px rgba(37, 99, 235, 0.04);
+  --shadow-glass: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
 
   /* Transitions */
-  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-smooth: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-bounce: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-smooth: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-bounce: 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 @theme inline {
@@ -253,4 +248,85 @@ body {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
+}
+
+/* Premium Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--background));
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* New Animations */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+    clip-path: inset(0 100% 0 0);
+  }
+
+  to {
+    opacity: 1;
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes shimmer-text {
+  0% {
+    background-position: -200% center;
+  }
+
+  100% {
+    background-position: 200% center;
+  }
+}
+
+.animate-slide-up {
+  animation: slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-reveal {
+  animation: reveal 1s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+}
+
+.animate-shimmer-text {
+  background: linear-gradient(90deg,
+      hsl(var(--foreground)) 0%,
+      hsl(var(--primary)) 50%,
+      hsl(var(--foreground)) 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer-text 5s linear infinite;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.05);
 }
