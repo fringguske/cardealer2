@@ -21,7 +21,7 @@ const FilterBar: React.FC<FilterBarProps> = ({
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="w-full max-w-7xl mx-auto mb-10 md:mb-16 animate-fade-in relative md:sticky top-24 z-30 px-6" style={{ animationDelay: '0.2s' }}>
+    <div className="w-full max-w-7xl mx-auto mb-10 md:mb-16 animate-fade-in relative md:sticky md:top-24 z-10 md:z-30 px-6" style={{ animationDelay: '0.2s' }}>
       <div className="glass-card rounded-[2rem] md:rounded-[2.5rem] p-4 md:p-8 transition-all duration-500">
 
         {/* Mobile Toggle Button */}
