@@ -5,8 +5,15 @@ import { CarService } from "../../services/carService";
 import { notFound } from "next/navigation";
 import BackButton from "../../components/BackButton";
 
-export default async function Page({ params }: { params: Promise<{ id: string }> }) {
+export default async function Page({
+  params,
+  searchParams
+}: {
+  params: Promise<{ id: string }>;
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
+}) {
   const { id } = await params;
+  const sParams = await searchParams; // Just to satisfy any strict checks if needed
   const car = await CarService.getCarById(id);
 
   if (!car) {
