@@ -138,7 +138,7 @@ const HeroSection: React.FC = () => {
                   <p className="text-xs font-bold uppercase tracking-widest text-blue-400">Limited Edition</p>
                 </div>
                 <h3 className="font-outfit font-black text-4xl mb-2">Pure Performance</h3>
-                <p className="text-white/70 font-medium">Starting at Ksh 24,500,000</p>
+                <p className="text-white/70 font-medium">Starting at Ksh 500,000</p>
               </div>
             </div>
           </div>
