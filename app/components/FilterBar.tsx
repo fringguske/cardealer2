@@ -19,7 +19,7 @@ const FilterBar: React.FC<FilterBarProps> = ({
   onPriceChange,
 }) => {
   return (
-    <div className="w-full max-w-7xl mx-auto mb-16 animate-fade-in sticky top-24 z-30 px-6" style={{ animationDelay: '0.2s' }}>
+    <div className="w-full max-w-7xl mx-auto mb-10 md:mb-16 animate-fade-in relative md:sticky top-24 z-30 px-6" style={{ animationDelay: '0.2s' }}>
       <div className="glass-card rounded-[2rem] md:rounded-[2.5rem] p-4 md:p-8 flex flex-col md:flex-row flex-wrap gap-4 md:gap-6 items-stretch md:items-center justify-between">
 
         {/* Main Filters */}
