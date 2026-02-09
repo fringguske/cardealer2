@@ -66,31 +66,31 @@ const HeroSection: React.FC = () => {
       </div>
 
       {/* Hero Content */}
-      <div className="w-full max-w-7xl mx-auto px-6 pt-48 pb-24 md:pt-64 md:pb-40 grid lg:grid-cols-2 gap-20 items-center">
+      <div className="w-full max-w-7xl mx-auto px-6 pt-32 pb-12 md:pt-64 md:pb-40 grid lg:grid-cols-2 gap-12 md:gap-20 items-center">
 
         {/* Text Side */}
-        <div className="flex flex-col gap-10 order-2 lg:order-1 animate-fade-in">
-          <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-blue-50/50 backdrop-blur-sm border border-blue-100/50 w-fit">
-            <span className="relative flex h-2.5 w-2.5">
+        <div className="flex flex-col gap-6 md:gap-10 order-2 lg:order-1 animate-fade-in relative z-10">
+          <div className="inline-flex items-center gap-3 px-4 py-2 md:px-5 md:py-2.5 rounded-full bg-blue-50/50 backdrop-blur-sm border border-blue-100/50 w-fit">
+            <span className="relative flex h-2 w-2 md:h-2.5 md:w-2.5">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-blue-500"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 md:h-2.5 md:w-2.5 bg-blue-500"></span>
             </span>
-            <span className="text-blue-600 text-[10px] font-black tracking-[0.2em] uppercase">Premium Showroom Live</span>
+            <span className="text-blue-600 text-[9px] md:text-[10px] font-black tracking-[0.2em] uppercase">Premium Showroom Live</span>
           </div>
 
-          <div className="space-y-4">
-            <h1 className="font-outfit text-6xl md:text-8xl font-black leading-[0.9] tracking-tight text-slate-900">
+          <div className="space-y-2 md:space-y-4">
+            <h1 className="font-outfit text-5xl sm:text-6xl md:text-8xl font-black leading-[0.9] tracking-tight text-slate-900">
               Beyond <br />
               <span className="text-blue-600">Ordinary.</span>
             </h1>
           </div>
 
-          <p className="text-xl text-slate-500 leading-relaxed max-w-md font-medium">
+          <p className="text-lg md:text-xl text-slate-500 leading-relaxed max-w-md font-medium">
             Curated precision. Unrivaled luxury. Discover a collection of the world's finest automotive masterpieces.
           </p>
 
-          <div className="flex flex-wrap gap-5 pt-4">
-            <button className="px-10 py-5 rounded-2xl bg-slate-900 text-white font-black text-lg flex items-center gap-3 group transition-all duration-500 hover:bg-blue-600 hover:shadow-2xl hover:shadow-blue-500/40 hover:-translate-y-1">
+          <div className="flex flex-col sm:flex-row gap-4 pt-2 md:pt-4">
+            <button className="w-full sm:w-auto px-8 md:px-10 py-4 md:py-5 rounded-2xl bg-slate-900 text-white font-black text-lg flex items-center justify-center gap-3 group transition-all duration-500 hover:bg-blue-600 hover:shadow-2xl hover:shadow-blue-500/40 hover:-translate-y-1">
               Explore Fleet
               <div className="bg-white/20 p-1 rounded-lg transition-transform duration-500 group-hover:translate-x-2">
                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -98,12 +98,12 @@ const HeroSection: React.FC = () => {
                 </svg>
               </div>
             </button>
-            <button className="px-10 py-5 rounded-2xl font-bold text-lg text-slate-600 hover:text-slate-900 hover:bg-white shadow-sm border border-slate-100 transition-all duration-500">
+            <button className="w-full sm:w-auto px-8 md:px-10 py-4 md:py-5 rounded-2xl font-bold text-lg text-slate-600 hover:text-slate-900 hover:bg-white shadow-sm border border-slate-100 transition-all duration-500">
               Contact VIP Sales
             </button>
           </div>
 
-          <div className="flex items-center gap-12 pt-12 border-t border-slate-200/50 mt-10">
+          <div className="flex items-center justify-between sm:justify-start gap-8 md:gap-12 pt-8 md:pt-12 border-t border-slate-200/50 mt-6 md:mt-10">
             <Stat number="85+" label="Active Fleet" />
             <Stat number="24" label="Global Parts" />
             <Stat number="15m" label="Verified" />
@@ -111,12 +111,12 @@ const HeroSection: React.FC = () => {
         </div>
 
         {/* Image Side */}
-        <div className="relative order-1 lg:order-2 h-[450px] md:h-[650px] w-full">
+        <div className="relative order-1 lg:order-2 h-[350px] md:h-[650px] w-full mt-10 lg:mt-0">
           {/* Decorative Layers */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-blue-500/10 rounded-full blur-[120px] scale-150 animate-pulse" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-blue-500/10 rounded-full blur-[80px] md:blur-[120px] scale-125 md:scale-150 animate-pulse" />
 
-          <div className="relative h-full w-full glass-panel rounded-[4rem] overflow-hidden p-3 border-white/40 shadow-2xl animate-float">
-            <div className="w-full h-full relative rounded-[3.5rem] overflow-hidden group">
+          <div className="relative h-full w-full glass-panel rounded-[2.5rem] md:rounded-[4rem] overflow-hidden p-2 md:p-3 border-white/40 shadow-2xl animate-float">
+            <div className="w-full h-full relative rounded-[2rem] md:rounded-[3.5rem] overflow-hidden group">
               <img
                 src="/carr/ice-bear-Fc1qqvL2Ets-unsplash.jpg"
                 alt="Premium Car"
@@ -126,19 +126,19 @@ const HeroSection: React.FC = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-60" />
 
               {/* Badge */}
-              <div className="absolute top-10 right-10 bg-white/90 backdrop-blur-xl px-6 py-3 rounded-2xl border border-white shadow-2xl">
-                <p className="text-[10px] font-black uppercase tracking-[0.2em] text-blue-600 mb-0.5">Showcase</p>
-                <p className="font-outfit font-black text-slate-900">911 GT3 RS</p>
+              <div className="absolute top-6 right-6 md:top-10 md:right-10 bg-white/90 backdrop-blur-xl px-4 py-2 md:px-6 md:py-3 rounded-xl md:rounded-2xl border border-white shadow-xl">
+                <p className="text-[9px] md:text-[10px] font-black uppercase tracking-[0.2em] text-blue-600 mb-0.5">Showcase</p>
+                <p className="font-outfit font-black text-slate-900 text-sm md:text-base">911 GT3 RS</p>
               </div>
 
               {/* Bottom Info */}
-              <div className="absolute bottom-12 left-12 right-12 text-white">
-                <div className="flex items-center gap-4 mb-2">
-                  <div className="h-0.5 w-12 bg-blue-500" />
-                  <p className="text-xs font-bold uppercase tracking-widest text-blue-400">Limited Edition</p>
+              <div className="absolute bottom-6 left-6 right-6 md:bottom-12 md:left-12 md:right-12 text-white">
+                <div className="flex items-center gap-3 md:gap-4 mb-2">
+                  <div className="h-0.5 w-8 md:w-12 bg-blue-500" />
+                  <p className="text-[10px] md:text-xs font-bold uppercase tracking-widest text-blue-400">Limited Edition</p>
                 </div>
-                <h3 className="font-outfit font-black text-4xl mb-2">Pure Performance</h3>
-                <p className="text-white/70 font-medium">Starting at Ksh 500,000</p>
+                <h3 className="font-outfit font-black text-2xl md:text-4xl mb-1 md:mb-2">Pure Performance</h3>
+                <p className="text-white/70 font-medium text-sm md:text-base">Starting at Ksh 500,000</p>
               </div>
             </div>
           </div>

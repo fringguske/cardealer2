@@ -87,8 +87,8 @@ export default function Home() {
       <div className="relative z-10">
         <HeroSection />
 
-        <div id="fleet" className="w-full max-w-7xl mx-auto px-6 py-32 md:py-48">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8 animate-fade-in">
+        <div id="fleet" className="w-full max-w-7xl mx-auto px-6 py-20 md:py-48">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 md:mb-20 gap-8 animate-fade-in">
             <div className="max-w-2xl">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-100 text-blue-600 text-[10px] font-black uppercase tracking-[0.2em] mb-6">
                 Curated Collection

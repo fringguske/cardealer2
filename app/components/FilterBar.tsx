@@ -20,14 +20,14 @@ const FilterBar: React.FC<FilterBarProps> = ({
 }) => {
   return (
     <div className="w-full max-w-7xl mx-auto mb-16 animate-fade-in sticky top-24 z-30 px-6" style={{ animationDelay: '0.2s' }}>
-      <div className="glass-card rounded-[2.5rem] p-5 md:p-8 flex flex-wrap gap-6 items-center justify-between">
+      <div className="glass-card rounded-[2rem] md:rounded-[2.5rem] p-4 md:p-8 flex flex-col md:flex-row flex-wrap gap-4 md:gap-6 items-stretch md:items-center justify-between">
 
         {/* Main Filters */}
-        <div className="flex flex-wrap gap-6 flex-grow">
-          <div className="relative group">
+        <div className="flex flex-col md:flex-row flex-wrap gap-4 md:gap-6 flex-grow">
+          <div className="relative group w-full md:w-auto">
             <select
               onChange={e => onVehicleTypeChange?.(e.target.value)}
-              className="appearance-none bg-white/40 hover:bg-white/60 backdrop-blur-xl border border-white/50 pl-12 pr-14 py-4 rounded-2xl text-slate-900 font-bold text-sm focus:outline-none focus:ring-4 focus:ring-blue-500/20 transition-all cursor-pointer min-w-[220px] shadow-sm"
+              className="w-full appearance-none bg-white/40 hover:bg-white/60 backdrop-blur-xl border border-white/50 pl-12 pr-14 py-4 rounded-xl md:rounded-2xl text-slate-900 font-bold text-sm focus:outline-none focus:ring-4 focus:ring-blue-500/20 transition-all cursor-pointer min-w-0 md:min-w-[220px] shadow-sm"
             >
               <option value="all">Vehicle Type</option>
               <option value="all">All Inventory</option>
@@ -44,10 +44,10 @@ const FilterBar: React.FC<FilterBarProps> = ({
             </div>
           </div>
 
-          <div className="relative group">
+          <div className="relative group w-full md:w-auto">
             <select
               onChange={e => onPriceChange?.(e.target.value)}
-              className="appearance-none bg-white/40 hover:bg-white/60 backdrop-blur-xl border border-white/50 pl-12 pr-14 py-4 rounded-2xl text-slate-900 font-bold text-sm focus:outline-none focus:ring-4 focus:ring-blue-500/20 transition-all cursor-pointer min-w-[220px] shadow-sm"
+              className="w-full appearance-none bg-white/40 hover:bg-white/60 backdrop-blur-xl border border-white/50 pl-12 pr-14 py-4 rounded-xl md:rounded-2xl text-slate-900 font-bold text-sm focus:outline-none focus:ring-4 focus:ring-blue-500/20 transition-all cursor-pointer min-w-0 md:min-w-[220px] shadow-sm"
             >
               <option value="">Price Cap</option>
               <option value="5000000">Below 5M</option>
@@ -65,10 +65,10 @@ const FilterBar: React.FC<FilterBarProps> = ({
         </div>
 
         {/* Sort Options */}
-        <div className="relative group">
+        <div className="relative group w-full md:w-auto">
           <select
             onChange={e => onSortChange?.(e.target.value)}
-            className="appearance-none bg-slate-900 text-white hover:bg-blue-600 border border-transparent pl-12 pr-14 py-4 rounded-2xl font-bold text-sm focus:outline-none focus:ring-4 focus:ring-blue-500/30 transition-all cursor-pointer min-w-[200px] shadow-xl"
+            className="w-full appearance-none bg-slate-900 text-white hover:bg-blue-600 border border-transparent pl-12 pr-14 py-4 rounded-xl md:rounded-2xl font-bold text-sm focus:outline-none focus:ring-4 focus:ring-blue-500/30 transition-all cursor-pointer min-w-0 md:min-w-[200px] shadow-xl"
           >
             <option value="default">Sort Listings</option>
             <option value="price-low">Value Focus</option>
